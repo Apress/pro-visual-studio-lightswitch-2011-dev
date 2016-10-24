@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Namespace="ApplicationData" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <Association Name="Person_Gender">
+    <End Role="Gender" Type="ApplicationData.Gender" Multiplicity="1" />
+    <End Role="Person" Type="ApplicationData.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="Person_Gender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Person_Gender" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Gender" Relationship="ApplicationData.Person_Gender" ToRole="Gender" FromRole="Person" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="GenderName" Type="String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="People" Relationship="ApplicationData.Person_Gender" ToRole="Person" FromRole="Gender" />
+  </EntityType>
+  <EntityContainer Name="ApplicationDataObjectContext">
+    <EntitySet Name="People" EntityType="ApplicationData.Person" />
+    <EntitySet Name="Genders" EntityType="ApplicationData.Gender" />
+    <AssociationSet Name="Person_Gender" Association="ApplicationData.Person_Gender">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

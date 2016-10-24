@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ApplicationDataStore">
+    <EntitySet Name="ProductFeedbacks" EntityType="ApplicationDataStore.ProductFeedback" store:Type="Tables" Schema="dbo" Table="ProductFeedbacks" />
+    <EntitySet Name="Hyperlinks" EntityType="ApplicationDataStore.Hyperlink" store:Type="Tables" Schema="dbo" Table="Hyperlinks" />
+    <EntitySet Name="Users" EntityType="ApplicationDataStore.User" store:Type="Tables" Schema="dbo" Table="Users" />
+    <EntitySet Name="Customers" EntityType="ApplicationDataStore.Customer" store:Type="Tables" Schema="dbo" Table="Customers" />
+    <EntitySet Name="Orders" EntityType="ApplicationDataStore.Order" store:Type="Tables" Schema="dbo" Table="Orders" />
+    <EntitySet Name="Products" EntityType="ApplicationDataStore.Product" store:Type="Tables" Schema="dbo" Table="Products" />
+    <AssociationSet Name="Order_Customer" Association="ApplicationDataStore.Order_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ProductFeedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductDescription" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Satisfaction" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hyperlink">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Firstname" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDesc" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="Order_Customer" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="ProductDescription" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="RichTextDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="Order_Customer">
+    <End Role="Customer" Type="ApplicationDataStore.Customer" Multiplicity="1" />
+    <End Role="Order" Type="ApplicationDataStore.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Order_Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

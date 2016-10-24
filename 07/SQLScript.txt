@@ -1,0 +1,37 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Supplier](
+	[SupplierID] [int] IDENTITY(1,1) NOT NULL,
+	[CompanyName] [nvarchar](60) NULL,
+	[ContactFirstname] [nvarchar](25) NULL,
+	[ContactSurname] [nvarchar](25) NULL,
+	[Title] [nvarchar](30) NULL,
+	[Address] [nvarchar](60) NULL,
+	[City] [nvarchar](15) NULL,
+	[Region] [nvarchar](15) NULL,
+	[PostalCode] [nvarchar](10) NULL,
+	[Country] [nvarchar](15) NULL,
+	[Phone] [nvarchar](24) NULL,
+	[Mobile] [nvarchar](24) NULL,
+	[Email] [nvarchar](24) NULL,
+ CONSTRAINT [PK_Supplier] PRIMARY KEY CLUSTERED 
+(
+	[SupplierID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+CREATE PROCEDURE [dbo].[DeleteSupplier] 
+    @SupplierID int
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DELETE FROM Supplier
+    WHERE SupplierID=@SupplierID
+
+END

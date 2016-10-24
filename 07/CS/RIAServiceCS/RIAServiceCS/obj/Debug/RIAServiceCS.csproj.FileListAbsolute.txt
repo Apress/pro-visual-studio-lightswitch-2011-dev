@@ -1,0 +1,8 @@
+C:\Badger\Ready\07 RIAServices\CS\RIAServiceCS\RIAServiceCS\bin\Debug\RIAServiceCS.dll
+C:\Badger\Ready\07 RIAServices\CS\RIAServiceCS\RIAServiceCS\bin\Debug\RIAServiceCS.pdb
+C:\Badger\Ready\07 RIAServices\CS\RIAServiceCS\RIAServiceCS\obj\Debug\ResolveAssemblyReference.cache
+C:\Badger\Ready\07 RIAServices\CS\RIAServiceCS\RIAServiceCS\obj\Debug\Central.Data.Services.Properties.Resources.resources
+C:\Badger\Ready\07 RIAServices\CS\RIAServiceCS\RIAServiceCS\obj\Debug\GenerateResource.read.1.tlog
+C:\Badger\Ready\07 RIAServices\CS\RIAServiceCS\RIAServiceCS\obj\Debug\GenerateResource.write.1.tlog
+C:\Badger\Ready\07 RIAServices\CS\RIAServiceCS\RIAServiceCS\obj\Debug\RIAServiceCS.dll
+C:\Badger\Ready\07 RIAServices\CS\RIAServiceCS\RIAServiceCS\obj\Debug\RIAServiceCS.pdb

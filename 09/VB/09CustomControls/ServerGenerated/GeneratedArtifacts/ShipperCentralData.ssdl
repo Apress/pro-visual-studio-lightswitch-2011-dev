@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ShipperCentralDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ShipperCentralDataStore">
+    <EntitySet Name="Customer" EntityType="ShipperCentralDataStore.Customer" store:Type="Tables" Schema="dbo" Table="Customer" />
+    <EntitySet Name="Order" EntityType="ShipperCentralDataStore.Order" store:Type="Tables" Schema="dbo" Table="Order" />
+    <EntitySet Name="OrderItem" EntityType="ShipperCentralDataStore.OrderItem" store:Type="Tables" Schema="dbo" Table="OrderItem" />
+    <EntitySet Name="OrderStatus" EntityType="ShipperCentralDataStore.OrderStatu" store:Type="Tables" Schema="dbo" Table="OrderStatus" />
+    <EntitySet Name="Product" EntityType="ShipperCentralDataStore.Product" store:Type="Tables" Schema="dbo" Table="Product" />
+    <AssociationSet Name="FK_Order_Customer" Association="ShipperCentralDataStore.FK_Order_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_OrderStatus" Association="ShipperCentralDataStore.FK_Order_OrderStatus">
+      <End Role="OrderStatus" EntitySet="OrderStatus" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Order" Association="ShipperCentralDataStore.FK_OrderItem_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderItem" EntitySet="OrderItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Product" Association="ShipperCentralDataStore.FK_OrderItem_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="OrderItem" EntitySet="OrderItem" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="25" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="25" />
+    <Property Name="Title" Type="nvarchar" MaxLength="30" />
+    <Property Name="Address" Type="nvarchar" MaxLength="60" />
+    <Property Name="City" Type="nvarchar" MaxLength="15" />
+    <Property Name="Region" Type="nvarchar" MaxLength="15" />
+    <Property Name="PostalCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Country" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="24" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="24" />
+    <Property Name="Email" Type="nvarchar" MaxLength="24" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="ShippingDate" Type="datetime" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="OrderStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="OrderItemID" />
+    </Key>
+    <Property Name="OrderItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderStatu">
+    <Key>
+      <PropertyRef Name="OrderStatusID" />
+    </Key>
+    <Property Name="OrderStatusID" Type="int" Nullable="false" />
+    <Property Name="StatusDescription" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductImage" Type="image" />
+    <Property Name="ProductCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpecialOffer" Type="bit" Nullable="false" />
+    <Property Name="RRP" Type="decimal" Scale="2" />
+    <Property Name="SupplierCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="255" />
+    <Property Name="Weight" Type="decimal" Scale="4" />
+  </EntityType>
+  <Association Name="FK_Order_Customer">
+    <End Role="Customer" Type="ShipperCentralDataStore.Customer" Multiplicity="1" />
+    <End Role="Order" Type="ShipperCentralDataStore.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_OrderStatus">
+    <End Role="OrderStatus" Type="ShipperCentralDataStore.OrderStatu" Multiplicity="0..1" />
+    <End Role="Order" Type="ShipperCentralDataStore.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderStatus">
+        <PropertyRef Name="OrderStatusID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OrderStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Order">
+    <End Role="Order" Type="ShipperCentralDataStore.Order" Multiplicity="0..1" />
+    <End Role="OrderItem" Type="ShipperCentralDataStore.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Product">
+    <End Role="Product" Type="ShipperCentralDataStore.Product" Multiplicity="0..1" />
+    <End Role="OrderItem" Type="ShipperCentralDataStore.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

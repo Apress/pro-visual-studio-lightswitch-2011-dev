@@ -1,0 +1,181 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Application.Common
+</name>
+</assembly>
+<members>
+<member name="M:LightSwitchApplication.DataWorkspace.#ctor">
+	<summary>
+ Initializes a new instance of a DataWorkspace.  Changes can be made to data sources in the new instance independent of changes made to data sources in the default DataWorkspace.
+ </summary>
+</member><member name="P:LightSwitchApplication.DataWorkspace.ApplicationData">
+	<summary>
+ Gets the ApplicationData datasource.  This provides members to query and update data in the data source.
+ </summary>
+</member><member name="P:LightSwitchApplication.DataWorkspace.ReportDataServiceVBData">
+	<summary>
+ Gets the ReportDataServiceVBData datasource.  This provides members to query and update data in the data source.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.People">
+	<summary>
+ Gets the People entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Genders">
+	<summary>
+ Gets the Genders entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.People_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.People_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Genders_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Genders_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="T:LightSwitchApplication.ApplicationData">
+	<summary>
+ Provides members to query and update data in the ApplicationData datasource.
+ </summary>
+</member><member name="P:LightSwitchApplication.ReportDataServiceVBData.ReportDataClasses">
+	<summary>
+ Gets the ReportDataClasses entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="M:LightSwitchApplication.ReportDataServiceVBData.ReportDataClasses_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ReportDataServiceVBData.ReportDataClasses_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="T:LightSwitchApplication.ReportDataServiceVBData">
+	<summary>
+ Provides members to query and update data in the ReportDataServiceVBData datasource.
+ </summary>
+</member><member name="M:LightSwitchApplication.Person.#ctor">
+	<summary>
+ Initializes a new instance of the Person entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Person.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Person.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Person.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Person.Name">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Person.Gender">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Person">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.Gender.#ctor">
+	<summary>
+ Initializes a new instance of the Gender entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Gender.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Gender.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Gender.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Gender.GenderName">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Gender.Person">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Gender">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.ReportDataClass.#ctor">
+	<summary>
+ Initializes a new instance of the ReportDataClass entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.ReportDataClass.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.ReportDataClass.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.ReportDataClass.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.ReportDataClass.Name">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.ReportDataClass.Total">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.ReportDataClass">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="F:LightSwitchApplication.Permissions.SecurityAdministration">
+	<summary>
+ Provides the ability to manage security for the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Permissions.AllPermissions">
+	<summary>
+ Gets all permissions defined for the application.  This includes system and user-defined permissions.
+ </summary>
+</member><member name="T:LightSwitchApplication.Permissions">
+	<summary>
+ Defines the names of the application permissions.
+ </summary>
+</member>
+</members>
+</doc>

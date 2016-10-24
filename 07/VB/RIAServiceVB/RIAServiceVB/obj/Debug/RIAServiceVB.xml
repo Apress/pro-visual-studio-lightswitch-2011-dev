@@ -1,0 +1,109 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+RIAServiceVB
+</name>
+</assembly>
+<members>
+<member name="M:Central.Data.Services.ApplicationData.Implementation.ApplicationDataObjectContext.#ctor">
+	<summary>
+ Initializes a new ApplicationDataObjectContext object using the connection string found in the 'ApplicationDataObjectContext' section of the application configuration file.
+ </summary>
+</member><member name="M:Central.Data.Services.ApplicationData.Implementation.ApplicationDataObjectContext.#ctor(System.String)">
+	<summary>
+ Initialize a new ApplicationDataObjectContext object.
+ </summary>
+</member><member name="M:Central.Data.Services.ApplicationData.Implementation.ApplicationDataObjectContext.#ctor(System.Data.EntityClient.EntityConnection)">
+	<summary>
+ Initialize a new ApplicationDataObjectContext object.
+ </summary>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.ApplicationDataObjectContext.People">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.ApplicationDataObjectContext.Genders">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Central.Data.Services.ApplicationData.Implementation.ApplicationDataObjectContext.AddToPeople(Central.Data.Services.ApplicationData.Implementation.Person)">
+	<summary>
+ Deprecated Method for adding a new object to the People EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Central.Data.Services.ApplicationData.Implementation.ApplicationDataObjectContext.AddToGenders(Central.Data.Services.ApplicationData.Implementation.Gender)">
+	<summary>
+ Deprecated Method for adding a new object to the Genders EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="T:Central.Data.Services.ApplicationData.Implementation.ApplicationDataObjectContext">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Central.Data.Services.ApplicationData.Implementation.Gender.CreateGender(System.Int32,System.String)">
+	<summary>
+ Create a new Gender object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="genderName">Initial value of the GenderName property.</param>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.Gender.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.Gender.GenderName">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.Gender.Person">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Central.Data.Services.ApplicationData.Implementation.Gender">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Central.Data.Services.ApplicationData.Implementation.Person.CreatePerson(System.Int32,System.String,System.Int32)">
+	<summary>
+ Create a new Person object.
+ </summary>
+	<param name="id">Initial value of the Id property.</param>
+	<param name="name">Initial value of the Name property.</param>
+	<param name="gender_Person">Initial value of the Gender_Person property.</param>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.Person.Id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.Person.Name">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.Person.Gender_Person">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.Person.Gender">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Central.Data.Services.ApplicationData.Implementation.Person.GenderReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Central.Data.Services.ApplicationData.Implementation.Person">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Central.Data.Services.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Central.Data.Services.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Central.Data.Services.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

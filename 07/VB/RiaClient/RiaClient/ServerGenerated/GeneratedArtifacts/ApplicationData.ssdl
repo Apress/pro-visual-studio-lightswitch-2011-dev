@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ApplicationDataStore">
+    <EntitySet Name="People" EntityType="ApplicationDataStore.Person" store:Type="Tables" Schema="dbo" Table="People" />
+    <EntitySet Name="Genders" EntityType="ApplicationDataStore.Gender" store:Type="Tables" Schema="dbo" Table="Genders" />
+    <AssociationSet Name="Gender_Person" Association="ApplicationDataStore.Gender_Person">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Gender_Person" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GenderName" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <Association Name="Gender_Person">
+    <End Role="Gender" Type="ApplicationDataStore.Gender" Multiplicity="1" />
+    <End Role="Person" Type="ApplicationDataStore.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="Gender_Person" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

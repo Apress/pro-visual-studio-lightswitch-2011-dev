@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{ECD6D718-D1CF-4119-97F3-97C25A0DFBF9}") = "RiaClient", "RiaClient\RiaClient\RiaClient.lsproj", "{6BA80457-823F-4E38-B0A2-CBAEF32A3F2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RIAServiceCS", "RIAServiceCS\RIAServiceCS\RIAServiceCS.csproj", "{961C230C-99F8-4976-8D55-769CFA29BD83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BA80457-823F-4E38-B0A2-CBAEF32A3F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA80457-823F-4E38-B0A2-CBAEF32A3F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA80457-823F-4E38-B0A2-CBAEF32A3F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA80457-823F-4E38-B0A2-CBAEF32A3F2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F272C584-3450-40DD-9DF2-EA488ECD4A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F272C584-3450-40DD-9DF2-EA488ECD4A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6CD0C8D-7D73-4379-A3BD-CF337CE53139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6CD0C8D-7D73-4379-A3BD-CF337CE53139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613A6795-8399-40FA-86DA-DE0EC0E92730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613A6795-8399-40FA-86DA-DE0EC0E92730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99593D9B-F37B-43ED-9486-E086822FB8BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99593D9B-F37B-43ED-9486-E086822FB8BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA75674-A572-4B36-9584-75F68009DF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA75674-A572-4B36-9584-75F68009DF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961C230C-99F8-4976-8D55-769CFA29BD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961C230C-99F8-4976-8D55-769CFA29BD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961C230C-99F8-4976-8D55-769CFA29BD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961C230C-99F8-4976-8D55-769CFA29BD83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

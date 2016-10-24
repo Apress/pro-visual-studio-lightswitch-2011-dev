@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CentralControls
+</name>
+</assembly>
+<members>
+<member name="M:CentralControls.CustomButton.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:CentralControls.NumericControl.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:CentralControls.RichTextEditorInternal.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:CentralControls.WebBrowserControl.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:CentralControls.CreditCardControl.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:CentralControls.Slider.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:CentralControls.RichTextBoxEditor.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

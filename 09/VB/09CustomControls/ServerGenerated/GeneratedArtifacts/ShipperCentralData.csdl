@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Namespace="ShipperCentralData" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <Association Name="FK_Order_Customer">
+    <End Role="Customer" Type="ShipperCentralData.Customer" Multiplicity="1" />
+    <End Role="Order" Type="ShipperCentralData.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_OrderStatus">
+    <End Role="OrderStatus" Type="ShipperCentralData.OrderStatu" Multiplicity="0..1" />
+    <End Role="Order" Type="ShipperCentralData.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderStatus">
+        <PropertyRef Name="OrderStatusID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OrderStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Order">
+    <End Role="Order" Type="ShipperCentralData.Order" Multiplicity="0..1" />
+    <End Role="OrderItem" Type="ShipperCentralData.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Product">
+    <End Role="Product" Type="ShipperCentralData.Product" Multiplicity="0..1" />
+    <End Role="OrderItem" Type="ShipperCentralData.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Firstname" Type="String" MaxLength="25" ConcurrencyMode="Fixed" />
+    <Property Name="Surname" Type="String" MaxLength="25" ConcurrencyMode="Fixed" />
+    <Property Name="Title" Type="String" MaxLength="30" ConcurrencyMode="Fixed" />
+    <Property Name="Address" Type="String" MaxLength="60" ConcurrencyMode="Fixed" />
+    <Property Name="City" Type="String" MaxLength="15" ConcurrencyMode="Fixed" />
+    <Property Name="Region" Type="String" MaxLength="15" ConcurrencyMode="Fixed" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" ConcurrencyMode="Fixed" />
+    <Property Name="Country" Type="String" MaxLength="15" ConcurrencyMode="Fixed" />
+    <Property Name="Phone" Type="String" MaxLength="24" ConcurrencyMode="Fixed" />
+    <Property Name="Mobile" Type="String" MaxLength="24" ConcurrencyMode="Fixed" />
+    <Property Name="Email" Type="String" MaxLength="24" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Orders" Relationship="ShipperCentralData.FK_Order_Customer" ToRole="Order" FromRole="Customer" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ShippingDate" Type="DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="OrderStatusID" Type="Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Customer" Relationship="ShipperCentralData.FK_Order_Customer" ToRole="Customer" FromRole="Order" />
+    <NavigationProperty Name="OrderStatu" Relationship="ShipperCentralData.FK_Order_OrderStatus" ToRole="OrderStatus" FromRole="Order" />
+    <NavigationProperty Name="OrderItems" Relationship="ShipperCentralData.FK_OrderItem_Order" ToRole="OrderItem" FromRole="Order" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="OrderItemID" />
+    </Key>
+    <Property Name="OrderItemID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="OrderID" Type="Int32" ConcurrencyMode="Fixed" />
+    <Property Name="ProductID" Type="Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Order" Relationship="ShipperCentralData.FK_OrderItem_Order" ToRole="Order" FromRole="OrderItem" />
+    <NavigationProperty Name="Product" Relationship="ShipperCentralData.FK_OrderItem_Product" ToRole="Product" FromRole="OrderItem" />
+  </EntityType>
+  <EntityType Name="OrderStatu">
+    <Key>
+      <PropertyRef Name="OrderStatusID" />
+    </Key>
+    <Property Name="OrderStatusID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="StatusDescription" Type="String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Orders" Relationship="ShipperCentralData.FK_Order_OrderStatus" ToRole="Order" FromRole="OrderStatus" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ProductName" Type="String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="ProductImage" Type="Binary" MaxLength="Max" ConcurrencyMode="None" />
+    <Property Name="ProductCode" Type="String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="SpecialOffer" Type="Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="RRP" Type="Decimal" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
+    <Property Name="SupplierCode" Type="String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Comment" Type="String" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Weight" Type="Decimal" Precision="18" Scale="4" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="OrderItems" Relationship="ShipperCentralData.FK_OrderItem_Product" ToRole="OrderItem" FromRole="Product" />
+  </EntityType>
+  <EntityContainer Name="ShipperCentralDataObjectContext">
+    <EntitySet Name="Customers" EntityType="ShipperCentralData.Customer" />
+    <EntitySet Name="Orders" EntityType="ShipperCentralData.Order" />
+    <EntitySet Name="OrderItems" EntityType="ShipperCentralData.OrderItem" />
+    <EntitySet Name="OrderStatus" EntityType="ShipperCentralData.OrderStatu" />
+    <EntitySet Name="Products" EntityType="ShipperCentralData.Product" />
+    <AssociationSet Name="FK_Order_Customer" Association="ShipperCentralData.FK_Order_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_OrderStatus" Association="ShipperCentralData.FK_Order_OrderStatus">
+      <End Role="OrderStatus" EntitySet="OrderStatus" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Order" Association="ShipperCentralData.FK_OrderItem_Order">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Product" Association="ShipperCentralData.FK_OrderItem_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

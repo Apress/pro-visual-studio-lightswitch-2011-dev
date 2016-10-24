@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <EnableENC>False</EnableENC>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <ServerPort>1175</ServerPort>
+    <Name>09CustomControls.user</Name>
+    <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
+    <SchemaManagementLastModelWriteTime>634708678097774936</SchemaManagementLastModelWriteTime>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <EnableENC>False</EnableENC>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <ServerPort>5017</ServerPort>
+    <PublishConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/M4WSSQm2066UAx7F4CjjAAAAAACAAAAAAADZgAAwAAAABAAAADWeaL+hfx410UcQlw17Vz1AAAAAASAAACgAAAAEAAAANi0bCSZYxPHU00N86erNTIIAQAACn9eKbXmArMm4qqu1X5t7FmuEkyZK+ijYs7Qiy5182afEfpCivbEUsSvShnYZ/WLOFXbyt5Te657OTlsc3Ar7PLMRegTjNcwJgLDgSKrcEj/aWbYkzyI/jMQH/+Izd7vuMzMwKGskgezxOoWlzum1I+61QD5EhALehTm5X6IEaoiAUgh5HnKwDQRadiaPeZ8NImArLCdt9U7bvLiT1p1eI/N+cs03bCo3yVvDu/l/CBW1gl9y3knVfH4+SLG5kbstGpkSCybFMV0NzLJscefr689IUdqJ7eAkxBc5CjEVTF3NLkqyRKJFF9w8ROoeCLr+2HH2sXrUaSZ46d8YEGqIyn6tD34Hx8LFAAAAPP1zGueTxLbDYzkrqfXLCV5RgnB</PublishConnectionString>
+    <PublishSchemaConnectionString />
+    <ClientConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/M4WSSQm2066UAx7F4CjjAAAAAACAAAAAAADZgAAwAAAABAAAAAhUl5GRFd4E6CZjmsST6ZMAAAAAASAAACgAAAAEAAAAHeyRJmZ0+16Us+k9lsIBkYIAQAA5yg/3Po2BHMpAhgCWqMHVgpW3iaAn9jWRkBaEk7pVk6+XPMdHBKrkc3eQdbLz5Y+X67PETIA9VBY6zsuCUob6EbPaoJplHES7jCoYQsnsYkqDgtYGzOlxn81JtUODWEyLvxKr7ywo2XNrTbMQ6a2gG8/KBYC84yFpQY6o2BOtEMMiv8dDwrHae7eaEUrLnZheObCSTOVCODjXM+DzZQPkPdnU4Bf1jlQVgDQlKO34M8n/snp0rxTdlszw7LhjfqkOD42Pg7HO1tSJA2e16hzpfCRpWR9YoCZQDt3xpZcm3b1n+v6VYGwk4Pil65MyTfZ50RvAjIdWR1VilsHSdaMitaDF8WSy77BFAAAAOjzpBlK8L9cLc8PamXjsa9DqlWm</ClientConnectionString>
+    <AdministratorPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/M4WSSQm2066UAx7F4CjjAAAAAACAAAAAAADZgAAwAAAABAAAAChUiS5tm2yrt0Td6XrSlIuAAAAAASAAACgAAAAEAAAAPElFiHikyzI0fV4XKhl49QYAAAAweudIRWGo8CfWUq5tN1YtFuQ6D1a8D0xFAAAAHFFszLslgd++iDi4WxmQc291pa2</AdministratorPassword>
+    <PublishUserName />
+    <PublishUserPassword />
+    <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
+    <SchemaManagementLastModelWriteTime>634578342996578963</SchemaManagementLastModelWriteTime>
+    <Name>09CustomControls.user</Name>
+  </PropertyGroup>
+</Project>

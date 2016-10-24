@@ -1,0 +1,323 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Application.Common
+</name>
+</assembly>
+<members>
+<member name="F:LightSwitchApplication.Permissions.SecurityAdministration">
+	<summary>
+ Provides the ability to manage security for the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Permissions.AllPermissions">
+	<summary>
+ Gets all permissions defined for the application.  This includes system and user-defined permissions.
+ </summary>
+</member><member name="T:LightSwitchApplication.Permissions">
+	<summary>
+ Defines the names of the application permissions.
+ </summary>
+</member><member name="M:LightSwitchApplication.Product.#ctor">
+	<summary>
+ Initializes a new instance of the Product entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Product.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Product.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Product.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Product.ProductName">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Product.ProductDescription">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Product.RichTextDescription">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Product">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.Order.#ctor">
+	<summary>
+ Initializes a new instance of the Order entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Order.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Order.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Order.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Order.OrderDesc">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Order.OrderDate">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Order.Customer">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Order">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.Customer.#ctor">
+	<summary>
+ Initializes a new instance of the Customer entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Customer.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Customer.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Customer.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Customer.Surname">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Customer.Firstname">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Customer.Orders">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Customer">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.User.#ctor">
+	<summary>
+ Initializes a new instance of the User entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.User.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Username">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.User.Password">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.User">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.Hyperlink.#ctor">
+	<summary>
+ Initializes a new instance of the Hyperlink entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.Hyperlink.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.Hyperlink.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.Hyperlink.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Hyperlink.Name">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.Hyperlink.URL">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.Hyperlink">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.ProductFeedback.#ctor">
+	<summary>
+ Initializes a new instance of the ProductFeedback entity.
+ </summary>
+</member><member name="P:LightSwitchApplication.ProductFeedback.Application">
+	<summary>
+ Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+ </summary>
+</member><member name="P:LightSwitchApplication.ProductFeedback.DataWorkspace">
+	<summary>
+ Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+ </summary>
+</member><member name="P:LightSwitchApplication.ProductFeedback.Id">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.ProductFeedback.ProductDescription">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="P:LightSwitchApplication.ProductFeedback.Satisfaction">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="T:LightSwitchApplication.ProductFeedback">
+	<summary>
+ No Modeled Description Available
+ </summary>
+</member><member name="M:LightSwitchApplication.DataWorkspace.#ctor">
+	<summary>
+ Initializes a new instance of a DataWorkspace.  Changes can be made to data sources in the new instance independent of changes made to data sources in the default DataWorkspace.
+ </summary>
+</member><member name="P:LightSwitchApplication.DataWorkspace.ApplicationData">
+	<summary>
+ Gets the ApplicationData datasource.  This provides members to query and update data in the data source.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.ProductFeedbacks">
+	<summary>
+ Gets the ProductFeedbacks entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Hyperlinks">
+	<summary>
+ Gets the Hyperlinks entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Users">
+	<summary>
+ Gets the Users entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Customers">
+	<summary>
+ Gets the Customers entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Orders">
+	<summary>
+ Gets the Orders entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="P:LightSwitchApplication.ApplicationData.Products">
+	<summary>
+ Gets the Products entity set.  The entity set provides members to access entities of a specific type.
+ </summary>
+</member><member name="M:LightSwitchApplication.ApplicationData.ProductFeedbacks_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.ProductFeedbacks_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Hyperlinks_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Hyperlinks_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Users_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Users_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Customers_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Customers_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Orders_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Orders_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Products_Single(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s).
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="M:LightSwitchApplication.ApplicationData.Products_SingleOrDefault(System.Nullable{System.Int32})">
+	<summary>
+ Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+ </summary>
+	<param name="Id">
+ The value of the 'Id' key property of the entity to retrieve.
+ </param>
+</member><member name="T:LightSwitchApplication.ApplicationData">
+	<summary>
+ Provides members to query and update data in the ApplicationData datasource.
+ </summary>
+</member>
+</members>
+</doc>

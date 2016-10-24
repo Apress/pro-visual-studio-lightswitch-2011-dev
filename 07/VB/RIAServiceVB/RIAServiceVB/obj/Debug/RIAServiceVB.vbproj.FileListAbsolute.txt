@@ -1,0 +1,20 @@
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\bin\Debug\RIAServiceVB.dll
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\bin\Debug\RIAServiceVB.pdb
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\bin\Debug\RIAServiceVB.xml
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\obj\Debug\ResolveAssemblyReference.cache
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\obj\Debug\GenerateResource.read.1.tlog
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\obj\Debug\GenerateResource.write.1.tlog
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\obj\Debug\RIAServiceVB.dll
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\obj\Debug\RIAServiceVB.xml
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\obj\Debug\RIAServiceVB.pdb
+c:\users\tim.badger2000\documents\visual studio 2010\Projects\RIAServiceVB\RIAServiceVB\obj\Debug\Central.Data.Services.Resources.resources
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\obj\Debug\ResolveAssemblyReference.cache
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\obj\Debug\Central.Data.Services.Resources.resources
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\obj\Debug\GenerateResource.read.1.tlog
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\obj\Debug\GenerateResource.write.1.tlog
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\obj\Debug\RIAServiceVB.dll
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\obj\Debug\RIAServiceVB.xml
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\obj\Debug\RIAServiceVB.pdb
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\bin\Debug\RIAServiceVB.dll
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\bin\Debug\RIAServiceVB.pdb
+C:\Badger\07 RIAServices\RIAServiceVB\RIAServiceVB\bin\Debug\RIAServiceVB.xml
